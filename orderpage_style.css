@@ -1,0 +1,102 @@
+/*Orderpage_style*/
+.cakes{
+  width: 30%;
+  height:200px;
+  margin-left:5px;
+  float: left;
+  border: 1px solid black;
+}
+.cakes_1{
+  width: 30%;
+  height:200px;
+  margin-left:5%;
+  float: left;
+  border: 1px solid black;
+}
+.cakes_3{
+  width: 30%;
+  height:200px;
+  margin-left:5px;
+  float:none;
+  border: 1px solid black;
+}
+.cakes_4{
+  width: 30%;
+  height:200px;
+  margin-left:5%;
+  float:none;
+  border: 1px solid black;
+}
+span{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 30%;
+  float: left;
+  margin-left:5px;
+  background-color: #ce93d8;
+  border: 1px solid black;
+}
+.span_1{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 30%;
+  float: left;
+  margin-left:5%;
+  background-color: #ce93d8;
+  border: 1px solid black;
+}
+#end_label{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  display: block;
+  background-color: #ce93d8;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  width: 30%;
+  margin-left:5%;
+  border: 1px solid black;
+}
+#menu{
+  border: 1px solid brown;
+	border-radius: 10px;
+	margin-left:50px;
+	margin-right:50px;
+  background-color: #fccdd3;
+}
+#menu h3{
+  margin-left:5%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#two_forms{
+  border: 1px solid brown;
+	border-radius: 10px;
+  margin-left:50px;
+	margin-right:50px;
+}
+.create_order{
+  border: 1px solid brown;
+	border-radius: 10px;
+  background-color: #c7ab93;
+}
+.create_order h3{
+  margin-left:10%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#form_1{
+  margin-left: 10%;
+  margin-right:10%;
+}
+#ordered_item{
+  border: 1px solid brown;
+	border-radius: 10px;
+  background-color: #b56969;
+}
+#ordered_item h3{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-left:10%;
+}
+#form_2{
+  margin-left: 10%;
+  margin-right:10%;
+}

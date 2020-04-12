@@ -1,0 +1,88 @@
+/*Homepage Style*/
+/*animation: pagetitle background colorchange*/
+
+/*animation: drop icon grow bigger*/
+.drop_icon{
+	transition: transform 3s linear;
+	-webkit-transition: transform 3s linear;
+}
+.drop_icon:hover {
+  transform: scale(1.5,1.5);
+  -webkit-transform: scale(1.5, 1.5);
+}
+#video_block{
+	border: 1px solid brown;
+	border-radius: 10px;
+	margin-left:50px;
+	margin-right:50px;
+	background-color: #7d4627;
+}
+#video_block h3{
+	margin-left:10%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+video{
+	margin-top:5px;
+	margin-bottom: 5px;
+  -ms-transform: translate(12%);
+  transform: translate(12%);
+  width:80%;
+}
+.create_order{
+	border: 1px solid brown;
+	border-radius: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: #c7ab93;
+}
+.create_order h3{
+	margin-left: 10%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#order_info{
+	margin-left: 10%;
+	margin-right: 10%;
+	width:80%;
+	min-width: 400px;
+
+}
+#cake_fact{
+	margin-left: 50px;
+	margin-right: 50px;
+	border: 1px solid brown;
+	border-radius: 10px;
+}
+#Buccellator{
+	margin-left: 20%;
+  width:60%;
+}
+
+#cake_picture{
+
+	width:50%;
+	height:350px;
+	border: 1px solid brown;
+	border-radius: 10px;
+	float: left;
+	background-color: #b56969;
+}
+#cake_picture h3{
+	margin-left:20%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#nutrition_facts{
+
+	height:350px;
+	border: 1px solid brown;
+	border-radius: 10px;
+	margin-left: 50%;
+	background-color: #fccdd3;
+}
+#nutrition_facts h3{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	margin-left:20%;
+}
+#nutrition_table{
+	width: 60%;
+	margin-left:20%;
+}
