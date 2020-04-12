@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="author" content="55601320 Luke Skywalker" />
+  <meta name="description" content="CW1 Designpage" />
+  <title> Design page </title>
+  <style>
+    .companylogo{
+      position: absolute;
+      width:125px;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+    .companyname{
+      margin-top: 50px;
+      margin-left:5px;
+      color:red;
+      font-family:fantasy;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../image/logo.png" alt="logo" width="100" class="companylogo">
+    <h2 class="companyname"> City Cake </h2>
+  </header>
+
+  <div class="pagetitle">
+    <h1>About us</h1>
+  </div class="pagetitle">
+
+  <div id="acknowledge">
+      <h3>Acknowledge: sources of information & ideas</h3>
+      <ol>
+        <li><a href="https://courses.cs.cityu.edu.hk/cs1303/example/html/">cs1303 good examples </a></li>
+        <li><a href=" https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float5	">W3C school </a>	</li>
+        <li><a href="https://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html">Trendy Web Color Palettes and Material Design Color Schemes & Tools</a> </li>
+      </ol>
+      <h3>Positioning Scheme Used:</h3>
+      <p>code: common_style.css</p>
+      <ol>
+        <li>absolute: company logo(11), company name(18), form label(85), footer link(204)</li>
+        <li>relative: logorun(33)</li>
+        <li>sticky: dropdown navigation(77)</li>
+      </ol>
+      <h3>CSS Techniques Used:</h3>
+      <p>code:  common_style.css</p>
+      <ol>
+        <li>animation: color change(50-70)</li>
+        <li>transition: move @ logorun hover(37-42)</li>
+        <li>basic: round corner @logorun(29)</li>
+      </ol>
+      <h3>How styles are grouped into style sheet/ embedded style</h3>
+      <ol>
+        <li>Homepage:common_style.css, homepage_style.css</li>
+        <li>Orderpage:common_style.css, orderpage_style.css</li>
+        <li>Printpage:printpage_style.css</li>
+      </ol>
+      <h3>Event Handler</h3>
+      <ol>
+        <li>HTML</li>
+        <ol>
+          <li>Printpage line 132: onclick</li>
+        </ol>
+        <li>javascript</li>
+        <ol>
+          <li>Orderpage line 77,81,85,89: onclick</li>
+          <li>Orderpage line 164,196: addEventListener</li>
+          <li>Orderpage line 238: onchange</li>
+        </ol>
+      </ol>
+
+  </div>
+
+
+
+</body>
+</html>

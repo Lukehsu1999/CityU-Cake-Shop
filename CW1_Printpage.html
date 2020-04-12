@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="author" content="55601320 Luke Skywalker" />
+  <meta name="description" content="CW1 Printpage" />
+  <title> Print page </title>
+  <link rel="stylesheet" href="../css/printpage_style.css" type="text/css" media="all" />
+  <script type="text/javascript" src="../js/cakemenu.js"></script>
+  <style>
+    footer{
+      display: none;
+    }
+  </style>
+  <style media="print">
+    #ClearButton{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    myMenu=initMenu();
+    var storage=window.localStorage;
+    function printstorage(){
+      var list;
+      for(var i=0;i<myMenu.length;i++){
+        var temp_cake_name=myMenu[i].description;
+        list+="local storage: "+temp_cake_name+" "+storage[temp_cake_name]+"<br>";
+      }
+      alert(list);
+    }
+
+  </script>
+  <div class="whole_invoice"> <!--whole_page->whole_invoice-->
+    <header>
+      <img src="../image/logo.png" alt="logo" width="100" class="companylogo">
+      <h2 class="companyname"> City Cake </h2>
+    </header>
+      <div class="pagetitle">
+        <h1>Invoice</h1>
+      </div>
+
+
+
+    <div id="printed_box">
+          <form  name="printed_invoice" id="printed_invoice">
+            <fieldset>
+              <legend>
+                order info
+              </legend>
+              <label>Tel No. </label><input type="text"  id="Tel_No" name="Tel_No" value="5"  class="upperform" disabled><br>
+              <label>Pick up Date </label><input type="date" id="Pick_up_Date" name="Pick_up_Date" value="" class="upperform" disabled><br>
+              <label>Delivery </label><input type="radio" name="PorD" value="Delivery" class="upperform" disabled><label>Pick up</label><input type="radio" name="PorD" value="Pickup" class="upperform" disabled>
+            </fieldset>
+
+            <fieldset>
+              <legend>ordered item</legend>
+              <table id="print_table">
+                <thead>
+                  <th>Cake Name</th><th>Quantity</th><th>Price</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                  <tr><td>Total</td><td id="Total_quantity">0</td><td id="Total_price">0</td></tr>
+                </tfoot>
+              </table>
+            </fieldset>
+          </form>
+    </div>
+    <script>
+      function getVar(variable){
+        var query=window.location.search.substring(1);
+        var vars = query.split("&");
+        for(var i=0;i<vars.length;i++){
+          var pair=vars[i].split("=");
+          if(pair[0]==variable){
+            return pair[1];
+          }
+        }
+        return null;
+      }
+
+      function fillval(){
+        if(window.location.search.substring(1)){
+          document.querySelector("#Tel_No").value=getVar("Tel_No");//do not use . in id names
+          document.querySelector("#Pick_up_Date").value=getVar("Pick_up_Date");
+          PorD=document.querySelectorAll("input[type='radio']");
+          switch(getVar("PorD")){
+            case "Delivery": PorD[0].checked=true;break;
+            case "Pickup": PorD[1].checked=true;break;
+          }
+
+        }
+
+      }
+      fillval();
+
+      function filltable(){
+        for(var i=0;i<myMenu.length;i++){
+          var c=myMenu[i].description;
+          var qty=storage[c];
+          if(Number(qty)>0 ){
+            var table=document.getElementById("print_table");//querySelecto("#id");getElementById("id")
+            var row=table.insertRow(1);
+            var cakename=row.insertCell(0);
+            var cakequantity=row.insertCell(1);
+            var cakeprice=row.insertCell(2);
+            cakename.innerHTML=c;
+            cakequantity.innerHTML=qty;
+            cakeprice.innerHTML=Number(qty)*Number(myMenu[i].price);
+            document.getElementById("Total_quantity").innerHTML=Number(document.getElementById("Total_quantity").innerHTML)+Number(qty);
+            document.getElementById("Total_price").innerHTML=Number(document.getElementById("Total_price").innerHTML)+Number(Number(qty)*Number(myMenu[i].price));
+          }
+        }
+      }
+      filltable();
+    </script>
+    <div>
+      <a href="../html/CW1_Homepage.html"><button type="button" name="Clear Invoice" id="ClearButton" onclick="ClearInvoice()">Clear Invoice</button></a>
+    </div>
+    <script>
+      function ClearInvoice(){
+        storage.clear();
+      }
+    </script>
+    <footer>
+      <h6>copy right: CityU 2017 sources of images and text from Wikipedia & courtesy of all-free-download.com</h6>
+      <div class="footer_link">
+            <a href="../html/CW1_Homepage.html">Home</a>
+            <a href="../html/CW1_Orderpage.html">Order</a>
+            <a href="../html/CW1_Designpage.html">About us</a>
+            <a href="#">Terms of use</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

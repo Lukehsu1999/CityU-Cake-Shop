@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="author" content="55601320 Luke Skywalker" />
+  <meta name="description" content="CW1 Homepage" />
+  <title> Homepage </title>
+  <link rel="stylesheet" href="../css/common_style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/homepage_style.css" type="text/css" media="all" />
+  <script type="text/javascript" src="../js/cakemenu.js"></script>
+  <style media="all">
+    .mySlides_n_f{display: none}
+    .mySlides_c_p{display: none}
+    .mySlides_v{display: none}
+    #picture_0{
+      height: 80%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+    #picture_1{
+      height: 80%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+    #picture_2{
+      height: 80%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+    #picture_3{
+      height: 80%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+    #nutrition_table_0{
+      height:60%;
+      width:80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    #nutrition_table_1{
+      height:60%;
+      width:80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    #nutrition_table_2{
+      height:60%;
+      width:80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    #nutrition_table_3{
+      height:60%;
+      width:80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <!--initialize myMenu-->
+  <script>
+    myMenu=initMenu();
+  </script>
+  <div class="whole_page">
+
+    <header>
+      <div class="logorun">
+        <img src="../image/logo.png" alt="logo" class="companylogo">
+        <h2 class="companyname"> City Cake </h2>
+      </div>
+    </header>
+
+    <div class="pagetitle">
+      <h1>Homepage</h1>
+    </div>
+
+    <div class="dropdown_navigation">
+        <div class="drop_icon"><img src="../image/viewlist.png" alt="viewlist"/></div>
+        <div class="dropdown_content">
+          <a href="../html/CW1_Homepage.html"><h4>Home</h4></a>
+          <a href="../html/CW1_Orderpage.html"><h4>Order</h4></a>
+          <a href="../html/CW1_Designpage.html"><h4>About us</h4></a>
+          <a href="#"><h4>Terms of use</h4></a>
+        </div>
+    </div>
+
+    <div class="slideshow-container(video)" id="video_block">
+      <div class="mySlides_v fade">
+        <div class="video">
+          <video id="video_0" muted>//no id, there was
+            <source src="http://courses.cs.cityu.edu.hk/cs2204/chocolate.mp4 " type="video/mp4">
+            <p>the video cannot be played</p>
+          </video>
+        </div>
+      </div>
+      <div class="mySlides_v fade">
+        <div class="video">
+          <video id="video_1">// there is autoplay
+            <source src="http://courses.cs.cityu.edu.hk/cs2204/cakemaking-s.mp4 " type="video/mp4">
+            <p>the video cannot be played</p>
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--Video Cycle-->
+    <script>
+      var slideIndex_v=0;
+      showSlides_v();
+      function showSlides_v(){
+        var i;
+        var slides = document.getElementsByClassName("mySlides_v");
+        for(i=0;i<slides.length;i++){
+          slides[i].style.display="none";
+        }
+        slideIndex_v++;
+        if(slideIndex_v>slides.length){slideIndex_v=1}
+        slides[slideIndex_v-1].style.display="block";
+        var vid;
+        var waitingtime;
+        if((slideIndex_v-1)==0){
+          vid=document.getElementById("video_0");
+          vid.play();
+          waitingtime=20416;
+        }else{
+          vid=document.getElementById("video_1");
+          vid.play();
+          waitingtime=30026;
+        }
+        setTimeout(showSlides_v,waitingtime+5000);
+      }
+    </script>
+    <div class="create_order">
+        <h3>Create an order here</h3>
+        <form action="CW1_Orderpage.html" method="get" name="order_info" id="order_info">
+          <fieldset>
+            <legend>order</legend>
+            <label>Tel No. </label><input type="text" name="Tel_No" value=""><br>
+            <label>Pick up Date </label><input type="date" name="Pick_up_Date" value=""><br>
+            <label>Delivery </label><input type="radio" name="PorD" value="Delivery"><label>Pick up</label><input type="radio" name="PorD" value="Pickup">
+          </fieldset>
+          <input type="submit" value="submit">
+          <button id="clear">clear</button>
+        </form>
+    </div>
+
+    <div id="cake_fact">
+      <!--cake picture slide show-->
+      <div class="slideshow-container(c_p)" id="cake_picture">
+        <div class="mySlides_c_p fade">
+          <div class="content" id="cp_0">
+            <script>
+              P_url_0=myMenu[0].imagefile;
+              var image_0 = document.createElement("img");
+              var image_0_Parent = document.getElementById("cp_0");
+              image_0.id = "picture_0";
+              image_0.src = P_url_0;
+              image_0_Parent.appendChild(image_0);
+            </script>
+          </div>
+        </div>
+        <!--picture slide 1-->
+        <div class="mySlides_c_p fade">
+          <div class="content" id="cp_1">
+            <script>
+              P_url_1=myMenu[1].imagefile;
+              var image_1 = document.createElement("img");
+              var image_1_Parent = document.getElementById("cp_1");
+              image_1.id = "picture_1";
+              image_1.src = P_url_1;
+              image_1_Parent.appendChild(image_1);
+            </script>
+          </div>
+        </div>
+        <!--picture slide 2-->
+        <div class="mySlides_c_p fade">
+          <div class="content" id="cp_2">
+            <script>
+              P_url_2=myMenu[2].imagefile;
+              var image_2 = document.createElement("img");
+              var image_2_Parent = document.getElementById("cp_2");
+              image_2.id = "picture_2";
+              image_2.src = P_url_2;
+              image_2_Parent.appendChild(image_2);
+            </script>
+          </div>
+        </div>
+        <!--picture slide 3-->
+        <div class="mySlides_c_p fade">
+          <div class="content" id="cp_3">
+            <script>
+              P_url_3=myMenu[3].imagefile;
+              var image_3 = document.createElement("img");
+              var image_3_Parent = document.getElementById("cp_3");
+              image_3.id = "picture_3";
+              image_3.src = P_url_3;
+              image_3_Parent.appendChild(image_3);
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!--nutrition facts slide show-->
+      <div class="slideshow-contatiner(n_f)" id="nutrition_facts">
+
+          <div class="mySlides_n_f fade">
+            <div class="text">
+              <h3 id="heading_0"></h3>
+              <table id="nutrition_table_0">
+                <caption>Nutrition Facts</caption>
+                <thead><th>Amount per 100 gram</th><th>%</th></thead>
+                <tbody>
+                  <tr><td>Carbohydrate</td><td id="Carbohydrate_0"></td></tr>
+                  <tr class="evenRow"><td>Protein</td><td id="Protein_0"></td></tr>
+                  <tr><td>Fat</td><td id="Fat_0"></td></tr>
+                  <tr class="evenRow"><td>Cholesterol</td><td id="Cholesterol_0"></td></tr>
+                  <tr><td>Total not add to 100%</td><td id="Not_0"></td>
+                </tbody>
+                <tfoot>
+                  <tr><td>Total</td><td>100</td></tr>
+                </tfoot>
+              </table>
+              <script>
+                var sum=0;
+                var i;
+                for (i=0;i<4;i++){
+                  sum=sum+myMenu[0].nutrition[i].percentage;
+                }
+                document.getElementById("heading_0").innerHTML=myMenu[0].description;
+                document.getElementById("Carbohydrate_0").innerHTML=myMenu[0].nutrition[0].percentage;
+                document.getElementById("Protein_0").innerHTML=myMenu[0].nutrition[1].percentage;
+                document.getElementById("Fat_0").innerHTML=myMenu[0].nutrition[2].percentage;
+                document.getElementById("Cholesterol_0").innerHTML=myMenu[0].nutrition[3].percentage;
+                document.getElementById("Not_0").innerHTML=100-sum;
+              </script>
+            </div>
+          </div>
+
+            <div class="mySlides_n_f fade">
+              <div class="text">
+                <h3 id="heading_1"></h3>
+                <table id="nutrition_table_1">
+                  <caption>Nutrition Facts</caption>
+                  <thead><th>Amount per 100 gram</th><th>%</th></thead>
+                  <tbody>
+                    <tr><td>Carbohydrate</td><td id="Carbohydrate_1"></td></tr>
+                    <tr class="evenRow"><td>Protein</td><td id="Protein_1"></td></tr>
+                    <tr><td>Fat</td><td id="Fat_1"></td></tr>
+                    <tr class="evenRow"><td>Cholesterol</td><td id="Cholesterol_1"></td></tr>
+                    <tr><td>Total not add to 100%</td><td id="Not_1"></td>
+                  </tbody>
+                  <tfoot>
+                    <tr><td>Total</td><td>100</td></tr>
+                  </tfoot>
+                </table>
+                <script>
+                  var sum=0;
+                  var i;
+                  for (i=0;i<4;i++){
+                    sum=sum+myMenu[1].nutrition[i].percentage;
+                  }
+                  document.getElementById("heading_1").innerHTML=myMenu[1].description;
+                  document.getElementById("Carbohydrate_1").innerHTML=myMenu[1].nutrition[0].percentage;
+                  document.getElementById("Protein_1").innerHTML=myMenu[1].nutrition[1].percentage;
+                  document.getElementById("Fat_1").innerHTML=myMenu[1].nutrition[2].percentage;
+                  document.getElementById("Cholesterol_1").innerHTML=myMenu[1].nutrition[3].percentage;
+                  document.getElementById("Not_1").innerHTML=100-sum;
+                </script>
+              </div>
+            </div>
+
+              <div class="mySlides_n_f fade">
+                <div class="text">
+                  <h3 id="heading_2"></h3>
+                  <table id="nutrition_table_2">
+                    <caption>Nutrition Facts</caption>
+                    <thead><th>Amount per 100 gram</th><th>%</th></thead>
+                    <tbody>
+                      <tr><td>Carbohydrate</td><td id="Carbohydrate_2"></td></tr>
+                      <tr class="evenRow"><td>Protein</td><td id="Protein_2"></td></tr>
+                      <tr><td>Fat</td><td id="Fat_2"></td></tr>
+                      <tr class="evenRow"><td>Cholesterol</td><td id="Cholesterol_2"></td></tr>
+                      <tr><td>Total not add to 100%</td><td id="Not_2"></td>
+                    </tbody>
+                    <tfoot>
+                      <tr><td>Total</td><td>100</td></tr>
+                    </tfoot>
+                  </table>
+                  <script>
+                    var sum=0;
+                    var i;
+                    for (i=0;i<4;i++){
+                      sum=sum+myMenu[2].nutrition[i].percentage;
+                    }
+                    document.getElementById("heading_2").innerHTML=myMenu[2].description;
+                    document.getElementById("Carbohydrate_2").innerHTML=myMenu[2].nutrition[0].percentage;
+                    document.getElementById("Protein_2").innerHTML=myMenu[2].nutrition[1].percentage;
+                    document.getElementById("Fat_2").innerHTML=myMenu[2].nutrition[2].percentage;
+                    document.getElementById("Cholesterol_2").innerHTML=myMenu[2].nutrition[3].percentage;
+                    document.getElementById("Not_2").innerHTML=100-sum;
+                  </script>
+                </div>
+              </div>
+
+                <div class="mySlides_n_f fade">
+                  <div class="text">
+                    <h3 id="heading_3"></h3>
+                    <table id="nutrition_table_3">
+                      <caption>Nutrition Facts</caption>
+                      <thead><th>Amount per 100 gram</th><th>%</th></thead>
+                      <tbody>
+                        <tr><td>Carbohydrate</td><td id="Carbohydrate_3"></td></tr>
+                        <tr class="evenRow"><td>Protein</td><td id="Protein_3"></td></tr>
+                        <tr><td>Fat</td><td id="Fat_3"></td></tr>
+                        <tr class="evenRow"><td>Cholesterol</td><td id="Cholesterol_3"></td></tr>
+                        <tr><td>Total not add to 100%</td><td id="Not_3"></td>
+                      </tbody>
+                      <tfoot>
+                        <tr><td>Total</td><td>100</td></tr>
+                      </tfoot>
+                    </table>
+                    <script>
+                      var sum=0;
+                      var i;
+                      for (i=0;i<4;i++){
+                        sum=sum+myMenu[3].nutrition[i].percentage;
+                      }
+                      document.getElementById("heading_3").innerHTML=myMenu[3].description;
+                      document.getElementById("Carbohydrate_3").innerHTML=myMenu[3].nutrition[0].percentage;
+                      document.getElementById("Protein_3").innerHTML=myMenu[3].nutrition[1].percentage;
+                      document.getElementById("Fat_3").innerHTML=myMenu[3].nutrition[2].percentage;
+                      document.getElementById("Cholesterol_3").innerHTML=myMenu[3].nutrition[3].percentage;
+                      document.getElementById("Not_3").innerHTML=100-sum;
+                    </script>
+                  </div>
+                </div>
+          </div>
+      </div>
+    <!--cake picture & nutrition slide show-->
+    <script>
+      var slideIndex=0;
+      showSlides();
+      function showSlides(){
+        var i;
+        var slides_nf = document.getElementsByClassName("mySlides_n_f");
+        var slides_cp = document.getElementsByClassName("mySlides_c_p");
+        for (i=0;i<slides_nf.length;i++){
+          slides_nf[i].style.display="none";
+          slides_cp[i].style.display="none";
+        }
+        slideIndex++;
+        if (slideIndex>slides_nf.length){slideIndex=1}
+        slides_nf[slideIndex-1].style.display="block";
+        slides_cp[slideIndex-1].style.display="block";
+        setTimeout(showSlides,3000);
+      }
+    </script>
+    <footer>
+      <h6>copy right: CityU 2017 sources of images and text from Wikipedia & courtesy of all-free-download.com</h6>
+      <div class="footer_link">
+            <a href="../html/CW1_Homepage.html">Home</a>
+            <a href="../html/CW1_Orderpage.html">Order</a>
+            <a href="../html/CW1_Designpage.html">About us</a>
+            <a href="#">Terms of use</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
